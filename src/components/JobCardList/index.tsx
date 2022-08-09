@@ -3,10 +3,10 @@ import { JobCard } from "../JobCard";
 
 export function JobCardList() {
   return (
-    <>
-      {jobList.map((job) => {
-        return <JobCard job={job}></JobCard>;
+    <section className='flex flex-col gap-10'>
+      {jobList.map((job,index) => {
+        return <JobCard job={job} key={index}></JobCard>;
       })}
-    </>
+    </section>
   );
 }

@@ -12,5 +12,6 @@ export type Job = {
     location: string;
     languages: string[];
     tools: string[];
+    skills?: string[];
   };
   
