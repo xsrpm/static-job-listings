@@ -1,5 +1,5 @@
-import { jobList } from "../../jobList";
-import { JobCard } from "../JobCard";
+import { jobList } from "../jobList";
+import { JobCard } from './JobCard';
 
 export function JobCardList() {
   return (
