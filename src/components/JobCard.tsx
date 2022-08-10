@@ -2,10 +2,10 @@ import { Job } from "../types";
 
 type Props = {
   job: Job;
+  addTag: (tag: string) => void;
 };
 
-export function JobCard({ job }: Props) {
-  job.skills = job.languages.concat(job.tools);
+export function JobCard({ job, addTag }: Props) {
   return (
     <article className='flex bg-white relative h-[16.25rem] shadow-lg mx-6 lg:h-40 lg:mx-40'>
       <div className={`w-[0.3125rem] rounded-l-xl  ${job.featured?"bg-primary": "bg-white"}`}></div>
@@ -20,7 +20,7 @@ export function JobCard({ job }: Props) {
                 <li className={`inline bg-secondary rounded-full py-1 px-2 ${job.featured? "":"hidden"} `}>FEATURED</li>
               </ul>
             </div>
-              <h2 className='font-bold text-secondary active:text-primary cursor-pointer'>Senior Frontend Developer</h2>
+              <h2 className='font-bold text-secondary active:text-primary cursor-pointer'>{job.position}</h2>
               <ul className='flex gap-2 text-tertiary font-medium'>
                 <li>{job.postedAt}</li>
                 <li>•</li>
@@ -33,8 +33,12 @@ export function JobCard({ job }: Props) {
         <hr className='border-tertiary my-4 lg:hidden'/>
         <ul className='flex gap-4 items-center'>
           {
-            job.skills.map((skill, index) => {
-              return <li className=" inline-block font-bold text-primary bg-filter-tables rounded p-1 lg:p-2 cursor-pointer active:bg-primary active:text-white" key={index}>{skill}</li>
+            job.tags && job.tags.map((tag, index) => {
+              return <li key={index}>
+                <button className=" inline-block font-bold text-primary bg-filter-tables rounded p-1 lg:p-2 cursor-pointer active:bg-primary active:text-white" onClick={()=>addTag(tag)}>
+                {tag}
+                </button>
+                </li>
             })
           }
         </ul>
