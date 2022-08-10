@@ -20,7 +20,7 @@ export function JobCard({ job }: Props) {
                 <li className={`inline bg-secondary rounded-full py-1 px-2 ${job.featured? "":"hidden"} `}>FEATURED</li>
               </ul>
             </div>
-              <h2 className='font-bold text-secondary'>Senior Frontend Developer</h2>
+              <h2 className='font-bold text-secondary active:text-primary cursor-pointer'>Senior Frontend Developer</h2>
               <ul className='flex gap-2 text-tertiary font-medium'>
                 <li>{job.postedAt}</li>
                 <li>•</li>
@@ -34,7 +34,7 @@ export function JobCard({ job }: Props) {
         <ul className='flex gap-4 items-center'>
           {
             job.skills.map((skill, index) => {
-              return <li className=" inline-block font-bold text-primary bg-filter-tables rounded p-1 lg:p-2" key={index}>{skill}</li>
+              return <li className=" inline-block font-bold text-primary bg-filter-tables rounded p-1 lg:p-2 cursor-pointer active:bg-primary active:text-white" key={index}>{skill}</li>
             })
           }
         </ul>
