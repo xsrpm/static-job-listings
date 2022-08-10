@@ -31,7 +31,7 @@ export function JobCard({ job, addTag }: Props) {
           </div>
         </div>
         <hr className='border-tertiary my-4 lg:hidden'/>
-        <ul className='flex gap-4 items-center'>
+        <ul className='flex gap-4 items-center flex-wrap'>
           {
             job.tags && job.tags.map((tag, index) => {
               return <li key={index}>
