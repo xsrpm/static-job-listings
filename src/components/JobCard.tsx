@@ -11,7 +11,7 @@ export function JobCard({ job, addTag }: Props) {
       <div className={`w-[0.3125rem] rounded-l-xl  ${job.featured?"bg-primary": "bg-white"}`}></div>
       <div className='w-full p-[1.1875rem] rounded-r-xl flex flex-col justify-around lg:flex-row lg:justify-between lg:px-10'>
         <div className='flex flex-col justify-around gap-4 lg:flex-row lg:items-center'>
-          <img className="w-12 h-12 absolute -top-6 lg:static lg:w-[5.5rem] lg:h-[5.5rem]" src={job.logo}/>
+          <img className="w-12 h-12 absolute -top-6 lg:static lg:w-[5.5rem] lg:h-[5.5rem]" src={job.logo} alt={job.company}/>
           <div className='flex flex-col justify-center gap-3'>
             <div>
               <p className="inline-block text-primary font-bold mr-6">{job.company}</p>
