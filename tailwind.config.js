@@ -27,8 +27,8 @@ module.exports = {
         base: '0.9375rem'
       },
       backgroundImage: {
-        'header-desktop': "url('./images/bg-header-desktop.svg')",
-        'header-mobile': "url('./images/bg-header-mobile.svg')"
+        'header-desktop': "url('../images/bg-header-desktop.svg')",
+        'header-mobile': "url('../images/bg-header-mobile.svg')"
       }
     }
   },
