@@ -5,5 +5,9 @@ type Props = {
 };
 
 export function Default({ children }: Props) {
-  return <main className='flex flex-col gap-14'>{children}</main>;
+  return (<>
+  <header className='h-40 bg-bg-header-mobile bg-primary'></header>
+    <main className='flex flex-col gap-14 relative'>{children}</main>
+  </>
+)
 }

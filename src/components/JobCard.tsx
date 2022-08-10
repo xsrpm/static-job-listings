@@ -7,7 +7,7 @@ type Props = {
 export function JobCard({ job }: Props) {
   job.skills = job.languages.concat(job.tools);
   return (
-    <article className='flex bg-white relative h-[16.25rem] shadow-lg'>
+    <article className='flex bg-white relative h-[16.25rem] shadow-lg mx-6'>
       <div className={`w-[0.3125rem] rounded-l-xl  ${job.featured?"bg-primary": "bg-white"}`}></div>
       <div className='w-full p-[1.1875rem] rounded-r-xl flex flex-col justify-around'>
       <img className="w-12 h-12 absolute -top-6" src={job.logo}/>

@@ -25,6 +25,10 @@ module.exports = {
       },
       fontSize:{
         'base': '0.9375rem',
+      },
+      backgroundImage:{
+        'bg-header': "url('./images/bg-header-desktop.svg')",
+        'bg-header-mobile': "url('./images/bg-header-mobile.svg')",
       }
     },
   },
